@@ -1,0 +1,37 @@
+[
+    {
+      "id": "1",
+      "product": "jugo de mango",
+      "categoria": "bebida",
+      "imagen": "https://images.unsplash.com/photo-1525385133512-2f3bdd039054?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8anVnbyUyMGRlJTIwbWFuZ298ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
+      "price": 100
+    },
+    {
+      "id": "2",
+      "product": "Cheesecake",
+      "categoria": "postre",
+      "imagen": "https://images.unsplash.com/photo-1578775887804-699de7086ff9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2hlZXNlY2FrZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "price": 500
+    },
+    {
+      "id": "3",
+      "product": "Limonada",
+      "categoria": "bebida",
+      "imagen": "https://images.unsplash.com/photo-1575596510825-f748919a2bf7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bGltb25hZGF8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
+      "price": 250
+    },
+    {
+      "id": "4",
+      "product": "Brownee",
+      "categoria": "postre",
+      "imagen": "https://media.istockphoto.com/id/1313777569/es/foto/pastel-de-libra-de-chocolate.jpg?s=612x612&w=0&k=20&c=zdtgWXtyVTGWbiNkizkzLPnRLNCUyxubJSMtzE1CGOw=",
+      "price": 800
+    },
+    {
+      "id": "5",
+      "product": "Malteada fresa",
+      "categoria": "bebida",
+      "imagen": "https://media.istockphoto.com/id/1255401209/es/foto/vidrio-con-batido-de-fresa-o-batido.jpg?s=612x612&w=0&k=20&c=h183pjQ_bA_E8zBW4fLUCl47LFcdS1L1VZzC5MXTi7o=",
+      "price": 300
+    }
+]
