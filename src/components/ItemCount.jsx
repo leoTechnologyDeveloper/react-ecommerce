@@ -1,0 +1,41 @@
+import Button from "../components/Button";
+import Number from "../components/Number";
+
+import { useState } from "react";
+
+const ItemCount = () => {
+  const [numClicks, setnumClicks] = useState(0);
+
+  const incrementar = () => {
+    setnumClicks(numClicks + 1);
+  };
+
+  const reiniciar = () => {
+    setnumClicks(0);
+  };
+
+  const decrementar = () => {
+    setnumClicks(numClicks - 1);
+  };
+
+  return (
+    <div className="flex flex-col items-center  bg-gray-300 my-3 py-3">
+      <h1>Cantidad </h1>
+      <Number numberClicks={numClicks} />
+      <div className="buttonsContainer">
+        <Button textButton="+" handleclick={incrementar} isClicker={true} />
+        <Button
+          textButton="Reiniciar"
+          handleclick={reiniciar}
+          isClicker={false}
+        />
+        <Button textButton="-" handleclick={decrementar} isClicker={true} />
+      </div>
+      <button className="m-5 bg-white rounded-full p-3 ">
+        Agregar al carrito
+      </button>
+    </div>
+  );
+};
+
+export default ItemCount;

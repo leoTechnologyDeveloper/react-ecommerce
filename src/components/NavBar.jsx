@@ -1,20 +1,40 @@
+import { NavLink } from "react-router-dom";
 import CartWidget from "./CartWidget";
 import logo from "./logo.jpg";
+import data from "../data/data.json";
+
+const categoriasCompletas = data.map((item) => item.categoria);
+
+const categoriasUnicas = new Set(categoriasCompletas);
+
+// console.log("las categorias unicas son ", categoriasUnicas);
 
 const NavBar = () => {
   return (
     <div className="flex  bg-blue-800 p-3 justify-between content-center text-white">
-      <img src={logo} alt="imagen logo" className="w-20 rounded-xl" />
+      <NavLink to={"/"}>
+        <img src={logo} alt="imagen logo" className="w-20 rounded-xl" />
+      </NavLink>
+      {/* <a href="/">
+        <img src={logo} alt="imagen logo" className="w-20 rounded-xl" />
+      </a> */}
+
       <nav className="flex flex-wrap flex-row gap-5 text-lg">
         <button>
-          <a href="/">Inicio</a>
+          <NavLink to={"/"}>home</NavLink>
+          {/* <a href="/">Inicio</a> */}
         </button>
-        <button>
-          <a href="/categoria/bebidas">Bebidas</a>
-        </button>
-        <button>
-          <a href="/categoria/postres">Postres</a>
-        </button>
+
+        {[...categoriasUnicas].map((item) => {
+          return (
+            <button>
+              <NavLink key={item} to={`/categoria/${item}`}>
+                {item}
+              </NavLink>
+              {/* <a href="/categoria/bebidas">Bebidas</a> */}
+            </button>
+          );
+        })}
 
         <CartWidget />
       </nav>

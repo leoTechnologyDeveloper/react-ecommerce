@@ -1,5 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
+import ItemDetailContainer from "./components/ItemDetailContainer";
+import ErrorPage from "./components/ErrorPage";
 import ItemListContainer from "./components/ItemListContainer";
 import NavBar from "./components/NavBar";
 
@@ -9,14 +11,18 @@ function App() {
       <div className="App flex flex-col m-auto content-center">
         <NavBar />
         <Routes>
+          <Route path="/" element={<ItemListContainer />} />
           <Route
-            path="/"
-            element={<ItemListContainer title="Hello from ItemListContainer" />}
+            path="/categoria/:categoriaId"
+            element={<ItemListContainer />}
           />
+          <Route path="/item/:Id" element={<ItemDetailContainer />} />
           <Route
-            path="/categoria/:id"
-            element={<ItemListContainer title="Hello from ItemListContainer" />}
+            path="*"
+            element={<ErrorPage title="No existe este recurso" />}
           />
+
+          {/* <ItemDetailContainer title="tit del itemdetailcontainer" /> */}
         </Routes>
       </div>
     </BrowserRouter>
