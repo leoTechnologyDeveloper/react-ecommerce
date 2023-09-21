@@ -15,7 +15,7 @@ const ItemDetailContainer = () => {
       setTimeout(() => {
         const productPorId = data.find((product) => product.id === Id);
         resolve(productPorId);
-      }, 2000);
+      }, 1000);
     });
 
     myPromise.then((response) => setProducto(response));

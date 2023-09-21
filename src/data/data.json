@@ -36,23 +36,44 @@
     },
     {
       "id": "6",
+      "product": "Chocolate Cream",
+      "categoria": "helado",
+      "imagen": "https://images.unsplash.com/photo-1580915411954-282cb1b0d780?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80",
+      "price": 1000
+    },
+    {
+      "id": "7",
       "product": "Flan Naranja",
       "categoria": "postre",
       "imagen": "https://images.unsplash.com/photo-1560180474-e8563fd75bab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80",
       "price": 450
     },
     {
-      "id": "7",
+      "id": "8",
       "product": "Jugo frutos Rojos",
       "categoria": "bebida",
       "imagen": "https://images.unsplash.com/photo-1595981266686-0cf387d0a608?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80",
       "price": 300
     },
     {
-      "id": "8",
+      "id": "9",
       "product": "Tiramisu",
       "categoria": "postre",
       "imagen": "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80",
       "price": 900
+    },
+    {
+      "id": "10",
+      "product": "Canasta Helado",
+      "categoria": "helado",
+      "imagen": "https://images.unsplash.com/photo-1619697097597-e95c5a794d74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80",
+      "price": 1500
+    },
+    {
+      "id": "11",
+      "product": "Banana Split",
+      "categoria": "helado",
+      "imagen": "https://images.unsplash.com/photo-1657225953401-5f95007fc8e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80",
+      "price": 950
     }
 ]
