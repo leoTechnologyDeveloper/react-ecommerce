@@ -3,7 +3,7 @@ import Number from "../components/Number";
 import { useState } from "react";
 
 const ItemCount = ({ onAdd, stock }) => {
-  const [numClicks, setnumClicks] = useState(0);
+  const [numClicks, setnumClicks] = useState(1);
 
   const incrementar = () => {
     numClicks < stock

@@ -7,7 +7,7 @@ const ItemDetailContainer = () => {
   const [producto, setProducto] = useState(null);
   const { Id } = useParams();
 
-  console.log("el id en params buscado es ", Id);
+  // console.log("el id en params buscado es ", Id);
 
   useEffect(() => {
     const myPromise = new Promise((resolve, reject) => {
@@ -21,17 +21,17 @@ const ItemDetailContainer = () => {
     myPromise.then((response) => setProducto(response));
   }, [producto, Id]);
 
-  console.log("el producto buscado es ", producto);
+  // console.log("el producto buscado es ", producto);
 
   if (!producto) return <p>... Un Momento, cargando stock</p>;
 
   return (
     <div className="flex flex-col items-center">
       <ItemDetail
-        nombre={producto.product}
-        categoria={producto.categoria}
-        imagen={producto.imagen}
-        precio={producto.price}
+        name={producto.name}
+        category={producto.category}
+        image={producto.image}
+        price={producto.price}
         stock={producto.stock}
       />
     </div>

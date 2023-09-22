@@ -9,7 +9,7 @@ const ItemListContainer = ({ title }) => {
 
   useEffect(() => {
     const myPromise = new Promise((resolve, reject) => {
-      setTimeout(() => resolve(data), 2000);
+      setTimeout(() => resolve(data), 1000);
     });
 
     myPromise.then((data) => setProductos(data));
@@ -18,7 +18,7 @@ const ItemListContainer = ({ title }) => {
   useEffect(() => {
     if (categoriaId) {
       let categoriaFiltrados = data.filter(
-        (item) => item.categoria === categoriaId
+        (item) => item.category === categoriaId
       );
       setProductos(categoriaFiltrados);
       console.log("Buscanto categoria :  ", categoriaId);

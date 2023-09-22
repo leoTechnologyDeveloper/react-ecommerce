@@ -3,7 +3,7 @@ import CartWidget from "./CartWidget";
 import logo from "./logo.jpg";
 import data from "../data/data.json";
 
-const categoriasCompletas = data.map((item) => item.categoria);
+const categoriasCompletas = data.map((item) => item.category);
 
 const categoriasUnicas = new Set(categoriasCompletas);
 
@@ -27,10 +27,8 @@ const NavBar = () => {
 
         {[...categoriasUnicas].map((item) => {
           return (
-            <button>
-              <NavLink key={item} to={`/categoria/${item}`}>
-                {item}
-              </NavLink>
+            <button key={item}>
+              <NavLink to={`/categoria/${item}`}>{item}</NavLink>
               {/* <a href="/categoria/bebidas">Bebidas</a> */}
             </button>
           );
