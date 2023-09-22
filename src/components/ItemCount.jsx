@@ -1,13 +1,14 @@
 import Button from "../components/Button";
 import Number from "../components/Number";
-
 import { useState } from "react";
 
-const ItemCount = () => {
+const ItemCount = ({ onAdd, stock }) => {
   const [numClicks, setnumClicks] = useState(0);
 
   const incrementar = () => {
-    setnumClicks(numClicks + 1);
+    numClicks < stock
+      ? setnumClicks(numClicks + 1)
+      : alert("paila ya llego al límite");
   };
 
   const reiniciar = () => {
@@ -31,7 +32,10 @@ const ItemCount = () => {
         />
         <Button textButton="-" handleclick={decrementar} isClicker={true} />
       </div>
-      <button className="m-5 bg-white rounded-full p-3 ">
+      <button
+        className="m-5 bg-white rounded-full p-3 "
+        onClick={() => onAdd(numClicks)}
+      >
         Agregar al carrito
       </button>
     </div>

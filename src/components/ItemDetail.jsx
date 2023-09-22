@@ -1,6 +1,10 @@
 import ItemCount from "./ItemCount";
 
-const ItemDetail = ({ nombre, categoria, imagen, precio }) => {
+const ItemDetail = ({ nombre, categoria, imagen, precio, stock }) => {
+  function onAdd(num) {
+    alert(num);
+  }
+
   return (
     <div className="flex items-center rounded-lg border-solid border-2 w-2/5 ">
       <div className="w-2/4">
@@ -10,7 +14,8 @@ const ItemDetail = ({ nombre, categoria, imagen, precio }) => {
         <p className="text-5xl my-1 text-blue-500"> {nombre}</p>
         <p className="text-xl my-1">Precio : {precio}</p>
         <p className="text-xl my-1">Categoría: {categoria}</p>
-        <ItemCount />
+        <p className="text-xl my-1">Stock Actual: {stock}</p>
+        <ItemCount onAdd={onAdd} stock={stock} />
       </div>
     </div>
   );
