@@ -5,19 +5,26 @@ export const CartContext = createContext([]);
 export const CartProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
 
-  const addItem = (name, category, image, price, stock, amount) =>
-    // console.log(nombre, categoria, imagen, precio, stock, amount);
-    setProducts((anterior) => [
-      ...anterior,
-      {
-        name,
-        category,
-        image,
-        price,
-        stock,
-        amount,
-      },
-    ]);
+  const addItem = (producto, amount) =>
+    setProducts((prev) => [...prev, { ...producto, amount }]);
+
+  // const addItem = (producto, amount) => {
+  //   const yaExiste = products.some((item) => item.id === producto.id);
+
+  //   if (!yaExiste) {
+  //     setProducts((prev) => [...prev, { ...producto, amount }]);
+  //   } else {
+  //     const productosActualizados = products.map((item) => {
+  //       if (item.id === producto.id)
+  //         return {
+  //           ...item,
+  //           amount: item.amount + amount,
+  //         };
+  //       else return item;
+  //     });
+  //     setProducts(productosActualizados);
+  //   }
+  // };
 
   const removeItem = (id) => {
     const productsAfterRemovedItem = products.filter((item) => item.id !== id);

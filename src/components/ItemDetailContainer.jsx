@@ -27,13 +27,7 @@ const ItemDetailContainer = () => {
 
   return (
     <div className="flex flex-col items-center">
-      <ItemDetail
-        name={producto.name}
-        category={producto.category}
-        image={producto.image}
-        price={producto.price}
-        stock={producto.stock}
-      />
+      <ItemDetail producto={producto} />
     </div>
   );
 };

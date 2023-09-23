@@ -16,7 +16,9 @@ const ItemCount = ({ onAdd, stock }) => {
   };
 
   const decrementar = () => {
-    setnumClicks(numClicks - 1);
+    numClicks > 1
+      ? setnumClicks(numClicks - 1)
+      : alert("ya no puedes disminuir mas");
   };
 
   return (
