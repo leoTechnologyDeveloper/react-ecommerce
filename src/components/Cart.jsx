@@ -10,7 +10,7 @@ const Cart = () => {
       {products.length === 0 ? (
         <ErrorPage title="No hay productos en el carrito" />
       ) : (
-        <table className="table-fixed text-blue-800 text-center mx-auto mt-5 w-4/5  ">
+        <table className="table-fixed text-blue-800 text-center mx-auto mt-5 w-4/5 text-xl ">
           <thead className="bg-blue-200 ">
             <tr className="py-2">
               <th>Producto</th>
@@ -35,11 +35,13 @@ const Cart = () => {
                 <td>{producto.category}</td>
                 <td>{producto.amount}</td>
                 <td>{producto.price}</td>
-                <td
-                  className="cursor-pointer"
-                  onClick={() => removeItem(producto.id)}
-                >
-                  X
+                <td>
+                  <button
+                    className="cursor-pointer text-red-500 bg-white p-1 px-2 rounded-lg font-extrabold border-2 border-blue-500 border-solid hover:bg-blue-500 hover:text-white"
+                    onClick={() => removeItem(producto.id)}
+                  >
+                    X
+                  </button>
                 </td>
               </tr>
             </tbody>
