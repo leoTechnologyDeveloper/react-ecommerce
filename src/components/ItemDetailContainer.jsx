@@ -26,7 +26,7 @@ const ItemDetailContainer = () => {
   if (!producto) return <p>... Un Momento, cargando stock</p>;
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center  bg-blue-200 h-screen">
       <ItemDetail producto={producto} />
     </div>
   );

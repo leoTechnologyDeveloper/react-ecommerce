@@ -8,7 +8,7 @@ const ItemDetail = ({ producto }) => {
   // console.log("producto recibido", producto);
 
   return (
-    <div className="flex items-center rounded-lg border-solid border-2 w-2/5 ">
+    <div className="flex items-center rounded-lg border-solid border-2 w-2/5 mt-5 bg-white">
       <div className="w-2/4">
         <img
           className="h-1/5 overflow-hidden"

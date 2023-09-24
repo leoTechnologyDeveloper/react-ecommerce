@@ -29,7 +29,6 @@ const NavBar = () => {
           return (
             <button key={item}>
               <NavLink to={`/categoria/${item}`}>{item}</NavLink>
-              {/* <a href="/categoria/bebidas">Bebidas</a> */}
             </button>
           );
         })}

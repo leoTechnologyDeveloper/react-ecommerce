@@ -34,7 +34,7 @@ const ItemListContainer = ({ title }) => {
   return productos.length === 0 ? (
     <p>... Un Momento, cargando stock</p>
   ) : (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center bg-blue-200 h-screen">
       {title}
       <ItemList productos={productos} />
     </div>
