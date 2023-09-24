@@ -22,7 +22,7 @@ function App() {
             <Route path="/item/:Id" element={<ItemDetailContainer />} />
             <Route
               path="*"
-              element={<ErrorPage title="No existe este recurso" />}
+              element={<ErrorPage title="Error 404 - No existe este recurso" />}
             />
             <Route path="/cart" element={<Cart />} />
           </Routes>
