@@ -5,6 +5,7 @@ import ErrorPage from "./components/ErrorPage";
 import ItemListContainer from "./components/ItemListContainer";
 import NavBar from "./components/NavBar";
 import { CartProvider } from "./contexts/CartContext";
+import Cart from "./components/Cart";
 
 function App() {
   return (
@@ -23,8 +24,7 @@ function App() {
               path="*"
               element={<ErrorPage title="No existe este recurso" />}
             />
-
-            {/* <ItemDetailContainer title="tit del itemdetailcontainer" /> */}
+            <Route path="/cart" element={<Cart />} />
           </Routes>
         </div>
       </BrowserRouter>
