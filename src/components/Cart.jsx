@@ -23,7 +23,7 @@ const Cart = () => {
                 <img
                   src={producto.image}
                   alt=""
-                  className="w-1/5 rounded-xl overflow-hidden text-center"
+                  className="w-20 rounded-full overflow-hidden text-center"
                 />
               </td>
               <td>{producto.name}</td>
