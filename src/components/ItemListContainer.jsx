@@ -2,7 +2,13 @@
 import { useState, useEffect } from "react";
 import ItemList from "../components/ItemList";
 import { useParams } from "react-router-dom";
-import { getFirestore, getDocs, collection } from "firebase/firestore";
+import {
+  getFirestore,
+  getDocs,
+  collection,
+  query,
+  where,
+} from "firebase/firestore";
 
 const ItemListContainer = ({ title }) => {
   const [productos, setProductos] = useState([]);
@@ -45,18 +51,20 @@ const ItemListContainer = ({ title }) => {
   useEffect(() => {
     const db = getFirestore();
 
-    const refCollection = collection(db, "productos");
+    const refCollection = categoriaId
+      ? query(collection(db, "productos"), where("category", "==", categoriaId))
+      : collection(db, "productos");
 
-    getDocs(refCollection).then((snapshot) => {
-      if (snapshot.size === 0) console.log("no results");
+    getDocs(refCollection).then((response) => {
+      if (response.size === 0) setProductos([]);
       else
         setProductos(
-          snapshot.docs.map((doc) => {
+          response.docs.map((doc) => {
             return { id: doc.id, ...doc.data() };
           })
         );
     });
-  }, []);
+  }, [categoriaId]);
 
   // ---------------------------
 
