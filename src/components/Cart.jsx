@@ -10,7 +10,7 @@ const Cart = () => {
       {products.length === 0 ? (
         <ErrorPage title="No hay productos en el carrito" />
       ) : (
-        <table className="table-fixed text-blue-800 text-center mx-auto mt-5 w-4/5 text-xl ">
+        <table className="table-fixed text-blue-800 text-center mx-auto mt-5 w-4/5 text-xl">
           <thead className="bg-blue-200 ">
             <tr className="py-2">
               <th>Producto</th>
@@ -28,13 +28,13 @@ const Cart = () => {
                   <img
                     src={producto.image}
                     alt=""
-                    className="w-20 rounded-full overflow-hidden text-center m-4 mx-auto"
+                    className="w-16 rounded-full overflow-hidden text-center m-2 mx-auto object-cover"
                   />
                 </td>
                 <td>{producto.name}</td>
                 <td>{producto.category}</td>
                 <td>{producto.amount}</td>
-                <td>{producto.price}</td>
+                <td>${producto.price}</td>
                 <td>
                   <button
                     className="cursor-pointer text-red-500 bg-white p-1 px-2 rounded-lg font-extrabold border-2 border-blue-500 border-solid hover:bg-blue-500 hover:text-white"
@@ -47,12 +47,13 @@ const Cart = () => {
             ))}
           </tbody>
           <tfoot>
-            <tr>
+            <tr className="bg-blue-200 p-4">
               <th></th>
               <th></th>
               <th></th>
-              <th>TOTAL</th>
-              <th>{calculateTotalPrice}</th>
+              <th className="bg-lime-200 p-3">TOTAL</th>
+              <th className="bg-lime-200 p-3">${calculateTotalPrice}</th>
+              <tr></tr>
             </tr>
           </tfoot>
         </table>
