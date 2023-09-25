@@ -1,10 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { initializeApp } from "firebase/app";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+//************************************* */
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBQfAl6S1oUm77r_IbkAk-0MM0G5h-QVgU",
+  authDomain: "react-ecommerce-ff30c.firebaseapp.com",
+  projectId: "react-ecommerce-ff30c",
+  storageBucket: "react-ecommerce-ff30c.appspot.com",
+  messagingSenderId: "1010306876061",
+  appId: "1:1010306876061:web:9b7a701bc36e70f54a8a74",
+};
+
+initializeApp(firebaseConfig);
+
+//************************************** */
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App />

@@ -21,9 +21,9 @@ const Cart = () => {
               <th></th>
             </tr>
           </thead>
-          {products.map((producto) => (
-            <tbody className="bg-gray-200">
-              <tr>
+          <tbody className="bg-gray-200">
+            {products.map((producto) => (
+              <tr key={producto.id}>
                 <td>
                   <img
                     src={producto.image}
@@ -44,8 +44,8 @@ const Cart = () => {
                   </button>
                 </td>
               </tr>
-            </tbody>
-          ))}
+            ))}
+          </tbody>
           <tfoot>
             <tr>
               <th></th>
