@@ -2,6 +2,7 @@ import data from "../data/data.json";
 import { useState, useEffect } from "react";
 import ItemDetail from "../components/ItemDetail";
 import { useParams } from "react-router-dom";
+import { getFirestore, getDoc, doc } from "firebase/firestore";
 
 const ItemDetailContainer = () => {
   const [producto, setProducto] = useState(null);
@@ -9,6 +10,9 @@ const ItemDetailContainer = () => {
 
   // console.log("el id en params buscado es ", Id);
 
+  // ******* THE FIRST EFFECT WORKING WITH DATA*******************************************
+
+  /*
   useEffect(() => {
     const myPromise = new Promise((resolve, reject) => {
       // setTimeout(() => resolve(data[4]), 2000);
@@ -21,7 +25,21 @@ const ItemDetailContainer = () => {
     myPromise.then((response) => setProducto(response));
   }, [producto, Id]);
 
+
+  */
   // console.log("el producto buscado es ", producto);
+
+  //********************** TILL HERE ********************* */
+
+  useEffect(() => {
+    const db = getFirestore();
+
+    const refDoc = doc(db, "productos", Id);
+
+    getDoc(refDoc).then((snapshot) => {
+      setProducto({ id: snapshot.id, ...snapshot.data() });
+    });
+  }, [Id]);
 
   if (!producto) return <p>... Un Momento, cargando stock</p>;
 
