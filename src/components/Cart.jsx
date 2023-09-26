@@ -3,7 +3,8 @@ import { CartContext } from "../contexts/CartContext";
 import ErrorPage from "../components/ErrorPage";
 
 const Cart = () => {
-  const { products, calculateTotalPrice, removeItem } = useContext(CartContext);
+  const { products, calculateTotalPrice, removeItem, clear } =
+    useContext(CartContext);
 
   return (
     <div className="flex  gap-4 w-4/5 h-2/5  m-auto content-center">
@@ -53,7 +54,14 @@ const Cart = () => {
               <th></th>
               <th className="bg-lime-200 p-3">TOTAL</th>
               <th className="bg-lime-200 p-3">${calculateTotalPrice}</th>
-              <tr></tr>
+              <th className="bg-blue-500">
+                <button
+                  className="cursor-pointer text-red-500 bg-white p-1 px-2 rounded-lg font-bold border-2 border-blue-500 border-solid hover:bg-blue-500 hover:text-white "
+                  onClick={() => clear()}
+                >
+                  Borrar Todo
+                </button>
+              </th>
             </tr>
           </tfoot>
         </table>
