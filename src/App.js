@@ -11,7 +11,7 @@ function App() {
   return (
     <CartProvider>
       <BrowserRouter>
-        <div className="App flex flex-col m-auto content-center ">
+        <div className="App flex flex-col m-auto content-center">
           <NavBar />
           <Routes>
             <Route path="/" element={<ItemListContainer />} />

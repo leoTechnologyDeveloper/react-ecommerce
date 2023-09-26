@@ -7,7 +7,7 @@ const Cart = () => {
     useContext(CartContext);
 
   return (
-    <div className="flex  gap-4 w-4/5 h-2/5  m-auto content-center">
+    <div className="flex gap-4 w-4/5 h-2/5 m-auto content-center ">
       {products.length === 0 ? (
         <ErrorPage title="No hay productos en el carrito" />
       ) : (
@@ -53,7 +53,9 @@ const Cart = () => {
               <th></th>
               <th></th>
               <th className="bg-lime-200 p-3">TOTAL</th>
-              <th className="bg-lime-200 p-3">${calculateTotalPrice}</th>
+              <th className="bg-lime-200 p-3 font-extrabold text-3xl">
+                ${calculateTotalPrice}
+              </th>
               <th className="bg-blue-500">
                 <button
                   className="cursor-pointer text-red-500 bg-white p-1 px-2 rounded-lg font-bold border-2 border-blue-500 border-solid hover:bg-blue-500 hover:text-white "

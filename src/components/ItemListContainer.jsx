@@ -71,7 +71,7 @@ const ItemListContainer = ({ title }) => {
   return productos.length === 0 ? (
     <p>... Un Momento, cargando stock</p>
   ) : (
-    <div className="flex flex-col items-center bg-blue-200 h-screen">
+    <div className="flex flex-col items-center bg-blue-100  bg-[url('https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')] bg-cover  ">
       {title}
       <ItemList productos={productos} />
     </div>
