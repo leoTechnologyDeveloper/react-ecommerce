@@ -119,7 +119,7 @@ const Cart = () => {
 
           {/* begin form  ************************************** */}
 
-          <form className="space-y-2 w-4/12 " action="/" method="POST">
+          <form className="space-y-2 w-4/12 mb-12" action="/" method="POST">
             <div className="flex items-center justify-between">
               <label className="block font-medium leading-6 text-white bg-blue-500 w-full text-center px-2 py-1 text-2xl ">
                 ORDEN DE COMPRA
@@ -131,7 +131,7 @@ const Cart = () => {
                   htmlFor="name"
                   className="block text-sm font-medium leading-6 text-gray-900"
                 >
-                  name
+                  Nombre
                 </label>
               </div>
               <div className="mt-0">

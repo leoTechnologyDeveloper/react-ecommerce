@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Button from "../components/Button";
 import Number from "../components/Number";
 import { useState } from "react";
@@ -34,12 +35,14 @@ const ItemCount = ({ onAdd, stock }) => {
         />
         <Button textButton="-" handleclick={decrementar} isClicker={true} />
       </div>
-      <button
-        className="m-5 bg-white rounded-full p-3 "
-        onClick={() => onAdd(numClicks)}
-      >
-        Agregar al carrito
-      </button>
+      <Link to={"/"}>
+        <button
+          className="m-5 bg-white rounded-full p-3 "
+          onClick={() => onAdd(numClicks)}
+        >
+          Agregar al carrito
+        </button>
+      </Link>
     </div>
   );
 };

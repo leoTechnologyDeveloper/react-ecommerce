@@ -3,9 +3,11 @@ import { useState, useEffect } from "react";
 import ItemDetail from "../components/ItemDetail";
 import { useParams } from "react-router-dom";
 import { getFirestore, getDoc, doc } from "firebase/firestore";
+import GridLoader from "react-spinners/ClipLoader";
 
 const ItemDetailContainer = () => {
   const [producto, setProducto] = useState(null);
+  const [loading, setLoading] = useState(false);
   const { Id } = useParams();
 
   // console.log("el id en params buscado es ", Id);
@@ -41,7 +43,25 @@ const ItemDetailContainer = () => {
     });
   }, [Id]);
 
-  if (!producto) return <p>... Un Momento, cargando stock</p>;
+  useEffect(() => {
+    setLoading(true);
+
+    setTimeout(() => {
+      setLoading(false);
+    }, 20000);
+  }, []);
+
+  // if (!producto) return <p>... Un Momento, cargando stock</p>;
+
+  if (!producto) return;
+  <GridLoader
+    color={"blue"}
+    loading={loading}
+    size={100}
+    aria-label="Loading Spinner"
+    data-testid="loader"
+    className="mt-10 mx-auto bg-blue-200 border-8"
+  />;
 
   return (
     <div className="flex flex-col items-center  bg-blue-200 h-screen">
