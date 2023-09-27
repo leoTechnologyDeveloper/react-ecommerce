@@ -66,8 +66,8 @@ const Cart = () => {
                 <th>Producto</th>
                 <th>Nombre</th>
                 <th>Categoría</th>
+                <th>Precio Unidad</th>
                 <th>Cantidad</th>
-                <th>Precio</th>
                 <th></th>
               </tr>
             </thead>
@@ -83,8 +83,8 @@ const Cart = () => {
                   </td>
                   <td>{producto.name}</td>
                   <td>{producto.category}</td>
-                  <td>{producto.amount}</td>
                   <td>${producto.price}</td>
+                  <td>{producto.amount}</td>
                   <td>
                     <button
                       className="cursor-pointer text-red-500 bg-white p-1 px-2 rounded-lg font-extrabold border-2 border-blue-500 border-solid hover:bg-blue-500 hover:text-white"
