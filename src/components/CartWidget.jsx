@@ -6,9 +6,9 @@ const CartWidget = () => {
   const { totalProductsInWidget } = useContext(CartContext);
 
   return (
-    <div className="self-center flex gap-2 bg-white p-2 rounded-xl">
+    <div className=" flex gap-2  p-2  bg-white rounded-lg">
       <img src={carrito} alt="imagen carrito" className="w-10" />
-      <p className="text-2xl my-1 text-blue-800">{totalProductsInWidget}</p>
+      <p className="text-2xl  text-blue-800">{totalProductsInWidget}</p>
     </div>
   );
 };
