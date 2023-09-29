@@ -1,4 +1,3 @@
-// import data from "../data/data.json";
 import { useState, useEffect } from "react";
 import ItemList from "../components/ItemList";
 import { useParams } from "react-router-dom";
@@ -24,40 +23,6 @@ const ItemListContainer = ({ title }) => {
     }, 10000);
   }, []);
 
-  //**  USE EFFECTS WORKING BEFORE ****************/
-
-  // useEffect(() => {
-  //   const myPromise = new Promise((resolve, reject) => {
-  //     setTimeout(() => resolve(data), 1000);
-  //   });
-
-  //   myPromise.then((data) => setProductos(data));
-  // }, []);
-
-  // useEffect(() => {
-  //   if (categoriaId) {
-  //     let categoriaFiltrados = data.filter(
-  //       (item) => item.category === categoriaId
-  //     );
-  //     setProductos(categoriaFiltrados);
-  //     console.log("Buscanto categoria :  ", categoriaId);
-  //     console.log(typeof categoriaId);
-  //     console.log("Los filtrados son ", categoriaFiltrados);
-  //   } else {
-  //     setProductos(data);
-  //   }
-  // }, [categoriaId]);
-
-  //** TILL HHERE -  USE EFFECTS WORKING BEFORE ****************/
-
-  // useEffect(() => {
-  //   const myPromise = new Promise((resolve, reject) => {
-  //     setTimeout(() => resolve(data), 1000);
-  //   });
-
-  //   myPromise.then((data) => setProductos(data));
-  // }, []);
-
   useEffect(() => {
     const db = getFirestore();
 
@@ -79,7 +44,6 @@ const ItemListContainer = ({ title }) => {
   // ---------------------------
 
   return productos.length === 0 ? (
-    // <p>... Un Momento, cargando stock</p>
     <GridLoader
       color={"blue"}
       loading={loading}

@@ -5,7 +5,6 @@ import { CartContext } from "../contexts/CartContext";
 const ItemDetail = ({ producto }) => {
   const { addItem } = useContext(CartContext);
   const onAdd = (amount) => addItem(producto, amount);
-  // console.log("producto recibido", producto);
 
   return (
     <div className="flex items-center rounded-lg border-solid border-2 w-2/5 mt-5 bg-white">

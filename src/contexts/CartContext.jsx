@@ -9,13 +9,9 @@ export const CartProvider = ({ children }) => {
     0
   );
 
-  // const addItem = (producto, amount) =>
-  //   setProducts((prev) => [...prev, { ...producto, amount }]);
-
   const isInCart = (id) => products.some((item) => item.id === id);
 
   const addItem = (producto, amount) => {
-    // const yaExiste = products.some((item) => item.id === producto.id );
     if (!isInCart(producto.id)) {
       setProducts((prev) => [...prev, { ...producto, amount }]);
     } else {
@@ -42,11 +38,6 @@ export const CartProvider = ({ children }) => {
     (acc, item) => acc + item.price * item.amount,
     0
   );
-
-  console.log("Los productos del carrito son");
-  console.log(products);
-
-  //   const [numClicks, setnumClicks] = useState(1);
 
   return (
     <CartContext.Provider

@@ -15,21 +15,11 @@ const Cart = () => {
   });
 
   const handleChange = (e) => {
-    // console.log(e.target.name, e.target.value);
     setformValues((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
     }));
   };
-
-  // console.log("products");
-  // console.log(products);
-  // console.log("total compra");
-  // console.log(calculateTotalPrice);
-  // console.log("datos comprador");
-  // console.log(formValues);
-
-  // const sendOrder2 = () => console.log(formValues);
 
   const sendOrder = () => {
     const order = {
@@ -205,13 +195,6 @@ const Cart = () => {
           </form>
 
           {/* end form  ***************************************** */}
-
-          {/* <button
-            onClick={() => sendOrder()}
-            className="w-1/5 px-4 py-2 rounded-xl text-3xl bg-blue-600 text-white hover:bg-orange-500  hover:text-black"
-          >
-            Comprar
-          </button> */}
         </>
       )}
     </div>

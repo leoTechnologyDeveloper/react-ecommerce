@@ -1,5 +1,4 @@
 import Item from "../components/Item";
-// import ItemDetail from "./ItemDetail";
 
 const ItemList = ({ productos }) => {
   return (
@@ -12,14 +11,6 @@ const ItemList = ({ productos }) => {
           category={producto.category}
           image={producto.image}
         />
-
-        // <ItemDetail
-        //   key={producto.id}
-        //   nombre={producto.product}
-        //   categoria={producto.categoria}
-        //   precio={producto.price}
-        //   imagen={producto.imagen}
-        // />
       ))}
     </div>
   );
